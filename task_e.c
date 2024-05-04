@@ -10,6 +10,10 @@ int main(int argc, char* argv[])
 	double num;
 	FILE* fptr;
 	fptr = fopen(argv[1], "r");
+	if (fptr == NULL) {
+		 printf("Error. Cannot open requested file.");
+		 return 1;
+		 }
 	fscanf(fptr, "%lf", &num);
 	fclose(fptr);
 
